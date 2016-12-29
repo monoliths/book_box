@@ -1,2 +1,6 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="jumbotron">
+  <h1>Welcome to our store.</h1>
+  <h2>Independent ebooks from around the globe. Register to start buying or selling now!</h2>
+  <%= link_to "Register", new_user_registration_path, class: "btn btn-primary" %>
+  <%= link_to "Books", "#", class: "btn btn-primary" %>
+</div>
