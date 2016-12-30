@@ -8,7 +8,7 @@
       <h2><%= @book.name %><small> by <%= @book.author %></small></h2>
     </div>
     <p class="justify"><%= @book.description %></p>
-    <h4 class="text-right">$<%= @book.price.to_f / 100 %></h4>
+    <h4 class="text-right"><%= number_to_currency(@book.price.to_f / 100) %></h4>
   </div>
 
 </div>

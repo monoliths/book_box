@@ -1,0 +1,11 @@
+<div class="col-md-3">
+  <div class="thmbnail">
+    <%= link_to(book) do %>
+      <%= image_tag "agile", class: "img-responsive" %>
+    <% end %>
+    <div class="caption">
+      <p><strong><%=link_to book.name, book %></strong></p>
+      <p><%= number_to_currency(book.price.to_f / 100) %></p>
+    </div>
+  </div>
+</div>
