@@ -60,3 +60,6 @@ gem 'simple_form'
 
 # authenication solution
 gem 'devise'
+
+# icon solution
+gem 'font-awesome-rails'

@@ -12,6 +12,7 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <% if current_user %>
+              <li><%= link_to "Dashboard", dashboard_path %></li>
               <li><%= link_to "New Book", new_book_path %></li>
             <% end %>
           </ul>
