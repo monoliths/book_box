@@ -63,3 +63,6 @@ gem 'devise'
 
 # icon solution
 gem 'font-awesome-rails'
+
+# resource authorization gem
+gem 'cancan'
