@@ -66,3 +66,6 @@ gem 'font-awesome-rails'
 
 # resource authorization gem
 gem 'cancan'
+
+# used to add images to resources
+gem 'paperclip'
