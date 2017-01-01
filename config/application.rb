@@ -11,5 +11,17 @@ module BookBox
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+
+    # Do not swallow errors in after_commit/after_rollback callbacks.
+    config.active_record.raise_in_transactional_callbacks = true
+    config.paperclip_defaults = {
+        storage: :s3,
+        s3_credentials:{
+            bucket: ENV['AWS_BUCKET'],
+            access_key_id: ENV['AWS_ACCESS_KEY_ID'],
+            secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
+        },
+        s3_region: ENV['AWS_REGION']
+    }
   end
 end

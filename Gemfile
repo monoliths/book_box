@@ -70,3 +70,6 @@ gem 'cancan'
 
 # used to add images to resources
 gem 'paperclip'
+
+# Book images and resources stored with aws
+gem 'aws-sdk', '~> 2.3.0'
