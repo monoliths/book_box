@@ -11,7 +11,7 @@
     <tr>
       <td><%= link_to sale.book.name, book_path(sale.book) %></td>
       <td><%= time_ago_in_words(sale.created_at) %> ago</td>
-      <td><%= sale.buyer_email %></td>
+      <td><%= sale.buyer.email %></td>
     </tr>
     <% end %>
   </tbody>

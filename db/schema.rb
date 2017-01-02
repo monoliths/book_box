@@ -35,10 +35,10 @@ ActiveRecord::Schema.define(version: 20170102042105) do
   end
 
   create_table "sales", force: :cascade do |t|
-    t.string   "buyer_email",  null: false
-    t.string   "seller_email", null: false
-    t.string   "guid"
+    t.string   "guid",         null: false
     t.integer  "book_id",      null: false
+    t.integer  "buyer_id",     null: false
+    t.integer  "seller_id",    null: false
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.string   "state"
@@ -46,6 +46,8 @@ ActiveRecord::Schema.define(version: 20170102042105) do
     t.string   "stripe_token"
     t.text     "error"
     t.integer  "amount"
+    t.index ["buyer_id"], name: "index_sales_on_buyer_id", using: :btree
+    t.index ["seller_id"], name: "index_sales_on_seller_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|

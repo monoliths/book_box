@@ -3,8 +3,8 @@ class TransactionsController < ApplicationController
     book = Book.find_by!(id: params[:id])
     @sale = book.sales.create(
       amount: book.price,
-			buyer_email: current_user.email,
-			seller_email: book.user.email,
+      seller: book.user,
+      buyer: current_user,
 			stripe_token: params[:stripeToken])
     @sale.process!
 
