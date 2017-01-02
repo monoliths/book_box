@@ -1,0 +1,18 @@
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Date</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @purchased.each do |sale| %>
+    <tr>
+      <td><%= link_to sale.book.name, book_path(sale.book) %></td>
+      <td><%= time_ago_in_words(sale.created_at) %> ago</td>
+      <td><%= link_to "Download", sale.book.resource.url, class: "btn btn-primary btn-sm" %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,26 @@
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th></th>
+      <th class="text-center">Available?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @offered_books.each do |book| %>
+    <tr>
+      <th><%= book.id %></th>
+      <td><%= link_to book.name, book_path(book) %></td>
+      <td><%= link_to "Edit", edit_book_path(book)%></td>
+      <td class="text-center">
+        <% if book.availability %>
+          <i class="fa fa-check" aria-hidden="true"></i>
+        <% else %>
+          <i class="fa fa-times" aria-hidden="true"></i>
+        <% end %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
