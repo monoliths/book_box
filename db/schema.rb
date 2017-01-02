@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170101000519) do
+ActiveRecord::Schema.define(version: 20170102010817) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,15 @@ ActiveRecord::Schema.define(version: 20170101000519) do
     t.string   "resource_content_type"
     t.integer  "resource_file_size"
     t.datetime "resource_updated_at"
+  end
+
+  create_table "sales", force: :cascade do |t|
+    t.string   "buyer_email",  null: false
+    t.string   "seller_email", null: false
+    t.string   "guid"
+    t.integer  "book_id",      null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "users", force: :cascade do |t|
