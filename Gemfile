@@ -73,3 +73,6 @@ gem 'paperclip'
 
 # Book images and resources stored with aws
 gem 'aws-sdk', '~> 2.3.0'
+
+# Payment processing
+gem 'stripe'

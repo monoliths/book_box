@@ -20,6 +20,6 @@ class Book < ApplicationRecord
   validates :resource, attachment_presence: true
 
   # Books should cost 99 cents or more
-  validates_numbercality_of :price,
+  validates_numericality_of :price,
     greater_than: 99, message: "Must be atleast 99 cents."
 end
