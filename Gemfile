@@ -76,3 +76,6 @@ gem 'aws-sdk', '~> 2.3.0'
 
 # Payment processing
 gem 'stripe'
+
+# Use states to keep track of sales in case there is a failure
+gem 'aasm'
