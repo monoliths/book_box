@@ -79,3 +79,11 @@ gem 'stripe'
 
 # Use states to keep track of sales in case there is a failure
 gem 'aasm'
+
+group :production do
+  # required for heroku deployment
+	gem 'rails_12factor'
+end
+
+# required for heroku deployment
+ruby '2.3.1'
